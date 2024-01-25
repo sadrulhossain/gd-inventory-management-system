@@ -1,0 +1,36 @@
+.app-brand-text.demo {
+    font-size: 1.75rem !important;
+    letter-spacing: -0.5px !important;
+    text-transform: uppercase !important;
+}
+.bg-menu-theme .menu-inner > .menu-item.active > .menu-link {
+    color: #30780a !important;
+    background-color: #ffffffcf !important;
+}
+.bg-menu-theme .menu-inner > .menu-item.active:before {
+    background: #51a125 !important;
+}
+.bg-menu-theme.menu-vertical, .layout-navbar {
+    background: url(../../../../img/sidebar-bg.png) no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+span.white, small.white, .form-label.white, .app-brand-text.text-body.white, .app-brand-text.menu-text.white,
+.bg-menu-theme .menu-link, .bg-menu-theme .menu-horizontal-prev,
+.bg-menu-theme .menu-horizontal-next{
+    color: #f1f3f5 !important;
+}
+.bg-menu-theme .menu-sub > .menu-item > .menu-link:before {
+    background-color: #b4bdc600 !important;
+}
+.dropdown-menu.dropdown-menu-end.show{
+    padding-top: 0 !important;
+}
+.dropdown-menu.dropdown-menu-end.show li:nth-child(1){
+    background: url(../../../../img/sidebar-bg.png) no-repeat center center fixed !important;
+    background-size: cover !important;
+    border-top-right-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+}
+
+

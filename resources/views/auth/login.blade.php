@@ -14,7 +14,7 @@
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Login Basic - Pages | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>@lang('label.LOGIN') | @lang('label.INVENTORY_MANAGEMENT_SYSTEM')</title>
 
     <meta name="description" content="" />
 
@@ -43,28 +43,19 @@
     <!-- Page CSS -->
     <!-- Page -->
     <link rel="stylesheet" href="{{asset('assets/vendor/css/pages/page-auth.css')}}" />
+    <!-- Custom login CSS -->
+    <link rel="stylesheet" href="{{asset('assets/layout/css/custom-login.css')}}" />
     <!-- Helpers -->
     <script src="{{asset('assets/vendor/js/helpers.js')}}"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{asset('assets/js/config.js')}}"></script>
-    <style>
-        .login{
-
-        }
-        .login-container{
-            background: url(../../../../img/login-bg.jpeg) no-repeat center center fixed !important;
-            background-size: cover !important;
-        }
-    </style>
 </head>
 
 <body>
 <!-- Content -->
-<div class="login">
-    <div class="login-container">
-        <div class="container-xxl">
+        <div class="container-xxl login-container">
             <div class="authentication-wrapper authentication-basic container-p-y">
                 <div class="authentication-inner">
                     <!-- Register -->
@@ -72,23 +63,21 @@
                         <div class="card-body">
                             <!-- Logo -->
                             <div class="app-brand justify-content-center">
-                                <a href="{{url('/')}}" class="app-brand-link gap-2">
-                                    <span class="app-brand-text demo text-body fw-bolder">
-                                        GD Inventory Management System
-                                    </span>
-                                </a>
+                                <span class="app-brand-text demo text-body white fw-bolder">
+                                    @lang('label.APP_NAME')
+                                </span>
                             </div>
                             <!-- /Logo -->
 
                             {!! Form::open(['url' => route('login'), 'method' => 'POST', 'id' => 'formAuthentication', 'class' => 'mb-3']) !!}
                             @csrf
                                 <div class="mb-3">
-                                    <label for="username" class="form-label">Username</label>
-                                    {!! Form::text('username', null, ['id' => 'username', 'class' => 'form-control', 'placeholder' => 'Enter your username', 'autofocus' => 'true']) !!}
+                                    <label for="username" class="form-label white">@lang('label.USERNAME')</label>
+                                    {!! Form::text('username', null, ['id' => 'username', 'class' => 'form-control', 'placeholder' => __('label.ENTER_YOUR_USERNAME'), 'autofocus' => 'true']) !!}
                                 </div>
                                 <div class="mb-3 form-password-toggle">
                                     <div class="d-flex justify-content-between">
-                                        <label class="form-label" for="password">Password</label>
+                                        <label class="form-label white" for="password">@lang('label.PASSWORD')</label>
                                     </div>
                                     <div class="input-group input-group-merge">
                                         {!! Form::password('password', ['id' => 'password', 'class' => 'form-control', 'placeholder' => '&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;', 'area-describedby' => 'password']) !!}
@@ -96,7 +85,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+                                    <button class="btn btn-info d-grid w-100" type="submit">@lang('label.SIGN_IN')</button>
                                 </div>
                             {!! Form::close() !!}
 
@@ -106,8 +95,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
 <!-- / Content -->
 

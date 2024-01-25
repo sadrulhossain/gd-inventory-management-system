@@ -1,0 +1,52 @@
+
+.login-container{
+    background: url(../../../../img/login-bg.png) no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+.authentication-wrapper.authentication-basic .authentication-inner .card {
+    background-color: #153e2875 !important;
+    border: 1px solid #153e28 !important;
+}
+.form-label.white, .app-brand-text.text-body.white {
+    color: #f1f3f5 !important;
+}
+.app-brand-text.demo {
+    font-size: 1.25rem !important;
+    letter-spacing: -1.45px !important;
+    text-transform: uppercase !important;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.authentication-wrapper.authentication-basic .authentication-inner {
+    width: 450px !important;
+}
+.authentication-wrapper.authentication-basic .authentication-inner {
+    width: 450px;
+    position: relative;
+}
+
+.form-control{
+    color: #697a8d !important;
+    background-color: #fff !important;
+}
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus,
+textarea:-webkit-autofill, textarea:-webkit-autofill:hover, textarea:-webkit-autofill:focus,
+select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus,
+input:-internal-autofill-selected {
+     background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+}
+
+.authentication-wrapper.authentication-basic .authentication-inner:after {
+    bottom: -90px !important;
+    left: -70px !important;
+}
+.authentication-wrapper.authentication-basic .authentication-inner:before {
+    top: -35px !important;
+    right: -35px !important;
+}

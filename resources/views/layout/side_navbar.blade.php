@@ -2,7 +2,8 @@
     <div class="app-brand demo">
         <a href="{{url('/')}}" class="app-brand-link">
             <span class="app-brand-text demo menu-text white fw-bolder ms-2">
-                @lang('label.APP_NAME_SHORT')
+                <img src="{{asset('img/logo.png')}}" alt="@lang('albe.APP_NAME_SHORT')"
+                    width="auto" height="60px"/>
             </span>
         </a>
 

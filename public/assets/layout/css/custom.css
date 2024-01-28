@@ -4,11 +4,11 @@
     text-transform: uppercase !important;
 }
 .bg-menu-theme .menu-inner > .menu-item.active > .menu-link {
-    color: #30780a !important;
+    color: #3e40bd !important;
     background-color: #ffffffcf !important;
 }
 .bg-menu-theme .menu-inner > .menu-item.active:before {
-    background: #51a125 !important;
+    background: #3d40bf !important;
 }
 .bg-menu-theme.menu-vertical, .layout-navbar {
     background: url(../../../../img/sidebar-bg.png) no-repeat center center fixed !important;

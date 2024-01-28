@@ -23,13 +23,6 @@ class RoleSeeder extends Seeder
             ['title' => 'Top Authority', 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
         ]);
 
-        DB::table('user_role')->insert([
-            'user_id' => 1,
-            'role_id' => 1,
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now()
-        ]);
-
 
     }
 }

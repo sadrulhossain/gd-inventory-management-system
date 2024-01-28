@@ -64,7 +64,8 @@
                             <!-- Logo -->
                             <div class="app-brand justify-content-center">
                                 <span class="app-brand-text demo text-body white fw-bolder">
-                                    @lang('label.APP_NAME')
+                                    <img src="{{asset('img/logo.png')}}" alt="@lang('albe.APP_NAME_SHORT')"
+                                         width="auto" height="100px"/>
                                 </span>
                             </div>
                             <!-- /Logo -->
@@ -88,6 +89,12 @@
                                     <button class="btn btn-info d-grid w-100" type="submit">@lang('label.SIGN_IN')</button>
                                 </div>
                             {!! Form::close() !!}
+
+                            <div class="app-brand justify-content-center">
+                                <span class="app-brand-text text-body white">
+                                    ©{{date('Y')}} @lang('label.APP_NAME')
+                                </span>
+                            </div>
 
                         </div>
                     </div>

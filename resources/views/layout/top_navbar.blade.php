@@ -45,7 +45,7 @@
                     <li>
                         <a class="dropdown-item" href="#">
                             <i class="bx bx-user me-2"></i>
-                            <span class="align-middle">My Profile</span>
+                            <span class="align-middle">@lang('label.MY_PROFILE')</span>
                         </a>
                     </li>
                     <li>
@@ -59,7 +59,7 @@
                                                     this.closest('form').submit();"
                         >
                             <i class="bx bx-power-off me-2"></i>
-                            <span class="align-middle">Log Out</span>
+                            <span class="align-middle">@lang('label.LOG_OUT')</span>
                         </a>
                         {!! Form::close() !!}
 

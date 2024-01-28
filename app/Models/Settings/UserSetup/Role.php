@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Settings\UserSetup;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Spatie\Permission\Models\Role as SpatieRole;
 
 class Role extends Model
 {

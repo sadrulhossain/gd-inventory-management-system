@@ -3,25 +3,33 @@
     letter-spacing: -0.5px !important;
     text-transform: uppercase !important;
 }
-.bg-menu-theme .menu-inner > .menu-item.active > .menu-link {
+.bg-menu-theme .menu-inner > .menu-item.active > .menu-link,
+.bg-menu-theme .menu-item.active > .menu-link:not(.menu-toggle){
     color: #3e40bd !important;
     background-color: #ffffffcf !important;
 }
 .bg-menu-theme .menu-inner > .menu-item.active:before {
     background: #3d40bf !important;
 }
+.bg-menu-theme .menu-inner > .menu-item.open .menu-item.open > .menu-toggle::before,
+.bg-menu-theme .menu-inner > .menu-item.open .menu-item.active > .menu-link::before {
+    box-shadow: 0 0 0 2px #b4bdc600 !important;
+}
 .bg-menu-theme.menu-vertical, .layout-navbar {
     background: url(../../../../img/sidebar-bg.png) no-repeat center center fixed !important;
     background-size: cover !important;
 }
 
-span.white, small.white, .form-label.white, .app-brand-text.text-body.white, .app-brand-text.menu-text.white,
+span.white, small.white, .form-label.white, .app-brand-text.text-body.white,
+.app-brand-text.menu-text.white,
 .bg-menu-theme .menu-link, .bg-menu-theme .menu-horizontal-prev,
 .bg-menu-theme .menu-horizontal-next{
     color: #f1f3f5 !important;
 }
-.bg-menu-theme .menu-sub > .menu-item > .menu-link:before {
+.bg-menu-theme .menu-sub > .menu-item > .menu-link:before,
+.bg-menu-theme .menu-sub > .menu-item.active > .menu-link:not(.menu-toggle):before{
     background-color: #b4bdc600 !important;
+    border: none !important;
 }
 .dropdown-menu.dropdown-menu-end.show{
     padding-top: 0 !important;
@@ -32,5 +40,23 @@ span.white, small.white, .form-label.white, .app-brand-text.text-body.white, .ap
     border-top-right-radius: 5px !important;
     border-top-left-radius: 5px !important;
 }
+.vcenter{
+    vertical-align: center !important;
+}
+
+.webkit-scrollbar::-webkit-scrollbar,
+.webkit-scrollbar + #floating-scrollbar::-webkit-scrollbar { height: 10px}
+::-webkit-scrollbar-button:start, ::-webkit-scrollbar-button:end { display: none; }
+::-webkit-scrollbar-thumb {
+    background-color: #7476dc;
+    -webkit-border-radius: 10px;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: #e5e5e5;
+    -webkit-border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:horizontal { width: 10px; background-color: #7476dc;}
+::-webkit-scrollbar-thumb:hover { background-color: #7476dc; }
+
 
 

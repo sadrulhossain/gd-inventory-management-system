@@ -27,6 +27,7 @@ return [
 
     //pagination
     'SHOWING_START_TO_END_OF_TOTAL_RECORDS' => 'Showing :start to :end of :total records',
+    'RECORDS_PER_PAGE' => 'records per page',
 
     //role
     'ROLE' => 'Role',

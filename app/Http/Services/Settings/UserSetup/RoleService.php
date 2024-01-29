@@ -10,6 +10,6 @@ Class RoleService
 {
     public function findAll(): LengthAwarePaginator
     {
-        return Role::query()->paginate(10);
+        return Role::query()->paginate(get_per_page_record());
     }
 }

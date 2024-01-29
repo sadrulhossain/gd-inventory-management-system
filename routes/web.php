@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Settings\UserSetup\RoleController;
@@ -26,10 +27,11 @@ Route::get('/', function () {
 });
 
 
-Route::middleware('auth')->group(function () {
-    Route::get('/dashboard',  [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard',  [DashboardController::class, 'index'])->middleware(['verified'])->name('dashboard');
+    Route::post('/set-record-per-page',  [AuthenticatedSessionController::class, 'setRecordPerPage']);
 
-    Route::middleware('auth')->group(function () {
+    Route::middleware(['admin'])->group(function () {
         Route::resource('roles', RoleController::class);
     });
 

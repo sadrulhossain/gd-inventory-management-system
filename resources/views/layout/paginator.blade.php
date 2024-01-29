@@ -12,18 +12,14 @@
         ])
     </div>
     <div class="col-md-2" id="recordPerPageHolder">
-{{--        {!! Form::open(array('group' => 'form', 'url' => 'setRecordPerPage', 'class' => '')) !!}--}}
-{{--        <div class="input-group">--}}
-{{--            <div class="input-icon">--}}
-{{--                <i class="fa fa-list fa-fw"></i>--}}
-{{--                {!! Form::text('record_per_page', 10, ['class' => 'form-control integer-only tooltips'--}}
-{{--                , 'title' => __('label.RECORDS_PER_PAGE'), 'placeholder' => __('label.RECORDS_PER_PAGE'), 'id' => 'recordPerPage',--}}
-{{--                'maxlength' => 3]) !!}--}}
-{{--            </div>--}}
-{{--            <span class="input-group-btn">--}}
-{{--                <button id="" class="btn btn-success" type="submit">--}}
-{{--                    <i class="fa fa-arrow-right fa-fw"></i></button>--}}
-{{--            </span>--}}
-{{--        </div>--}}
-{{--        {!! Form::close() !!}--}}
+        {!! Form::open(array('group' => 'form', 'url' => 'set-record-per-page', 'class' => '')) !!}
+        <div class="input-group">
+            {!! Form::select('record_per_page', get_per_page_record_list(), get_per_page_record(), [
+                'id' => 'recordPerPage', 'class' => 'form-select w-px-40'
+            ]) !!}
+            <button class="btn btn-primary" type="submit" id="pageRecordBtn">
+                <i class='bx bx-right-arrow-alt'></i>
+            </button>
+        </div>
+        {!! Form::close() !!}
     </div>

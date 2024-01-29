@@ -7,6 +7,10 @@
 .bg-menu-theme .menu-item.active > .menu-link:not(.menu-toggle){
     color: #3e40bd !important;
     background-color: #ffffffcf !important;
+    border-bottom: 3px solid #3e40bd !important;
+}
+.bg-menu-theme .menu-inner .menu-item:not(.active) > .menu-link{
+    border-bottom: 1px solid #f1f3f5 !important;
 }
 .bg-menu-theme .menu-inner > .menu-item.active:before {
     background: #3d40bf !important;

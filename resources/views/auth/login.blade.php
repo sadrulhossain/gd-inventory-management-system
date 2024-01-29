@@ -19,7 +19,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{asset('assets/img/favicon/favicon.ico')}}" />
+    <link rel="icon" type="image/x-icon" href="{{asset('img/favicon.ico')}}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -86,7 +86,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <button class="btn btn-info d-grid w-100" type="submit">@lang('label.SIGN_IN')</button>
+                                    <button class="btn btn-primary d-grid w-100" type="submit">@lang('label.SIGN_IN')</button>
                                 </div>
                             {!! Form::close() !!}
 

@@ -3,24 +3,24 @@
 namespace App\Http\Controllers\Settings\UserSetup;
 
 use App\Http\Controllers\Controller;
-use App\Http\Services\Settings\UserSetup\RoleService;
+use App\Http\Services\Settings\UserSetup\UserService;
 use Illuminate\Http\Request;
 
-class RoleController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request, RoleService $roleService)
+    public function index(Request $request, UserService $userService)
     {
         //passing param for custom function
         $qpArr = $request->all();
-        $roles = $roleService->findAll();
-        if ($roles->isEmpty() && isset($qpArr['page']) && ($qpArr['page'] > 1)) {
-            return redirect('/roles?page=' . ($qpArr['page'] - 1));
+        $users = $userService->findAll();
+        if ($users->isEmpty() && isset($qpArr['page']) && ($qpArr['page'] > 1)) {
+            return redirect('/users?page=' . ($qpArr['page'] - 1));
         }
-        return view('settings.user-setup.role.index')->with(compact(
-            'qpArr', 'roles'
+        return view('settings.user-setup.user.index')->with(compact(
+            'qpArr', 'users'
         ));
     }
 

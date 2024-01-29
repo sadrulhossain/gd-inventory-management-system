@@ -21,6 +21,15 @@
     background-color: #17a2b8;
     border-color: #17a2b8;
 }
+.btn-primary {
+    color: #fff;
+    background-color: #30318e;
+    border-color: #30318e;
+}
+.btn-primary:hover {
+    background-color: #252548;
+    color: #fff;
+}
 
 .authentication-wrapper.authentication-basic .authentication-inner {
     width: 450px !important;

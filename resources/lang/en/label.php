@@ -1,9 +1,6 @@
 <?php
 
 return [
-    'USERNAME' => 'Username',
-    'ENTER_YOUR_USERNAME' => 'Enter your username',
-    'PASSWORD' => 'Password',
     'SIGN_IN' => 'Sign In',
     'LOGIN' => 'Login',
     'LOG_OUT' => 'Log Out',
@@ -57,4 +54,8 @@ return [
     'DELETE_USER' => 'Delete User',
     'USER_HAS_BEEN_DELETED_SUCCESSFULLY' => 'User has been deleted successfully',
     'FAILED_TO_DELETE_USER' => 'Failed to delete user',
+    'USERNAME' => 'Username',
+    'ENTER_YOUR_USERNAME' => 'Enter your username',
+    'PASSWORD' => 'Password',
+    'EMAIL' => 'Email',
 ];

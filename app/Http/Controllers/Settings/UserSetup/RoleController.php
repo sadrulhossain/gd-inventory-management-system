@@ -14,13 +14,14 @@ class RoleController extends Controller
     public function index(Request $request, RoleService $roleService)
     {
         //passing param for custom function
-        $qpArr = $request->all();
+        $qp_arr = $request->all();
+        $sl = get_page_sl($qp_arr);
         $roles = $roleService->findAll();
-        if ($roles->isEmpty() && isset($qpArr['page']) && ($qpArr['page'] > 1)) {
-            return redirect('/roles?page=' . ($qpArr['page'] - 1));
+        if ($roles->isEmpty() && isset($qp_arr['page']) && ($qp_arr['page'] > 1)) {
+            return redirect('/roles?page=' . ($qp_arr['page'] - 1));
         }
         return view('settings.user-setup.role.index')->with(compact(
-            'qpArr', 'roles'
+            'qp_arr', 'sl', 'roles'
         ));
     }
 

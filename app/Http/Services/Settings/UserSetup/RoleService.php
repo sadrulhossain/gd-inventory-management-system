@@ -12,4 +12,9 @@ Class RoleService
     {
         return Role::query()->paginate(get_per_page_record());
     }
+
+    public function findAllList(): array
+    {
+        return Role::query()->pluck('title', 'id')->toArray();
+    }
 }

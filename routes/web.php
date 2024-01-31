@@ -35,6 +35,7 @@ Route::middleware(['auth'])->group(function () {
     Route::middleware(['admin'])->group(function () {
         Route::resource('roles', RoleController::class);
         Route::resource('users', UserController::class);
+        Route::post('users/filter', [UserController::class, 'filter'])->name('users.filter');
     });
 
 });

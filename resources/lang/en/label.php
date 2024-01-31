@@ -11,6 +11,10 @@ return [
     'DASHBOARD' => 'Dashboard',
 
     'SL' => 'SL',
+    'SEARCH' => 'Search',
+    'FILTER' => 'Filter',
+    'NO_RECORD_FOUND' => 'No record found',
+    'ACTIONS' => 'Actions',
     'ADD' => 'Add',
     'CREATE' => 'Create',
     'EDIT' => 'Edit',
@@ -28,6 +32,7 @@ return [
 
     //role
     'ROLE' => 'Role',
+    'SELECT_ROLE' => '-- Select Role --',
     'ROLE_LIST' => 'Role List',
     'ADD_NEW_ROLE' => 'Add New Role',
     'CREATE_ROLE' => 'Create Role',

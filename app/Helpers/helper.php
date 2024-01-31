@@ -30,4 +30,29 @@ if (!function_exists('get_per_page_record_list')) {
         ];
     }
 }
+if (!function_exists('get_page_no_str')) {
+    function get_page_no_str($qp_arr): string
+    {
+        //link for same page after query
+        $qpStr = '';
+        if (!empty($qpArr)) {
+            $qpStr .= '?';
+            foreach ($qpArr as $key => $value) {
+                if ($value != '') {
+                    $qpStr .= $key . '=' . $value . '&';
+                }
+            }
+            $qpStr = trim($qpStr, '&');
+        }
+        return $qpStr;
+    }
+}
+if (!function_exists('get_page_sl')) {
+    function get_page_sl($qp_arr): string
+    {
+        return (($qp_arr['page'] ?? 1) - 1) * get_per_page_record();
+    }
+}
+
+
 /**  end :: pagination functions */

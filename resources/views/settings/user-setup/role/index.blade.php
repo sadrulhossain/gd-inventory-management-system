@@ -24,10 +24,6 @@
                                     </thead>
                                     <tbody class="table-border-bottom-0">
                                         @if(!$roles->isEmpty())
-                                            @php
-                                                $page = $qpArr['page'] ?? 1;
-                                                $sl = ($page - 1) * get_per_page_record();
-                                            @endphp
                                             @foreach($roles as $role)
                                                 <tr>
                                                     <td class="text-center">{!! ++$sl !!}</td>

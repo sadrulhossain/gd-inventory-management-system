@@ -19,7 +19,7 @@
                             <div class="row">
                                 <label class="col-form-label text-right col-md-4" for="search">@lang('label.SEARCH')</label>
                                 <div class="col-md-8">
-                                    {!! Form::text('search',  Request::get('search'), ['class' => 'form-control tooltips', 'title' => 'Name', 'placeholder' => 'Name', 'list'=>'search', 'autocomplete'=>'off']) !!}
+                                    {!! Form::text('search', Request::get('search'), ['class' => 'form-control tooltips', 'title' => 'Name', 'placeholder' => 'Name', 'list'=>'search', 'autocomplete'=>'off']) !!}
                                     <datalist id="search">
                                         @if(!empty($name_arr))
                                             @foreach($name_arr as $name)
@@ -35,7 +35,7 @@
                                 <label class="col-form-label text-right col-md-4" for="role_id">@lang('label.ROLE')</label>
                                 <div class="col-md-8">
                                     {!! Form::select('role_id', $role_list, Request::get('role_id'), [
-                                        'id' => 'role_id', 'class' => 'form-control'
+                                        'id' => 'role_id', 'class' => 'form-control form-select'
                                     ]) !!}
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     {!! Form::close() !!}
-                    <div class="row mt-2">
+                    <div class="row mt-4">
                         <div class="col-12">
                             <a href="{{route('users.create')}}" class="btn green-seagreen bx-pull-right">
                                 <i class="bx bx-plus"></i> @lang('label.ADD_NEW_USER')
@@ -80,10 +80,11 @@
                                                     </td>
                                                 </tr>
                                             @endforeach
-                                        @endif
+                                        @else
                                         <tr>
                                             <td colspan="6" class="text-center">@lang('label.NO_RECORD_FOUND')</td>
                                         </tr>
+                                        @endif
                                     </tbody>
                                 </table>
                             </div>
@@ -94,4 +95,8 @@
             </div>
         </div>
     </div>
+@stop
+
+@section('js')
+
 @stop

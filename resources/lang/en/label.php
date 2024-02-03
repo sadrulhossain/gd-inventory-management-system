@@ -21,7 +21,9 @@ return [
     'UPDATE' => 'Update',
     'REMOVE' => 'Remove',
     'DELETE' => 'Delete',
+    'SAVE' => 'Save',
     'SUBMIT' => 'Submit',
+    'NOTE' => 'Note',
 
     'SETTINGS' => 'Settings',
     'USER_SETUP' => 'User Setup',
@@ -59,8 +61,11 @@ return [
     'DELETE_USER' => 'Delete User',
     'USER_HAS_BEEN_DELETED_SUCCESSFULLY' => 'User has been deleted successfully',
     'FAILED_TO_DELETE_USER' => 'Failed to delete user',
+    'NAME' => 'Name',
     'USERNAME' => 'Username',
     'ENTER_YOUR_USERNAME' => 'Enter your username',
     'PASSWORD' => 'Password',
+    'CONFIRM_PASSWORD' => 'Confirm Password',
+    'PASSWORD_NOTE' => 'Please enter password of 8-16 digits containing at least one capital letter, number and special character but space is not allowed.',
     'EMAIL' => 'Email',
 ];

@@ -38,5 +38,6 @@
 </div>
 <!-- / Layout wrapper -->
 @include('layout.footer_script')
+@yield('js')
 </body>
 </html>

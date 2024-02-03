@@ -5,7 +5,13 @@ namespace App\Http\Controllers\Settings\UserSetup;
 use App\Http\Controllers\Controller;
 use App\Http\Services\Settings\UserSetup\RoleService;
 use App\Http\Services\Settings\UserSetup\UserService;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Application;
+use Illuminate\Contracts\Foundation\Application as ContractApplication;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
@@ -13,7 +19,7 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request, UserService $userService, RoleService $roleService)
+    public function index(Request $request, UserService $userService, RoleService $roleService): Application|View|Factory|Redirector|ContractApplication|RedirectResponse
     {
         //passing param for custom function
         $qp_arr = $request->all();
@@ -31,7 +37,7 @@ class UserController extends Controller
         ));
     }
 
-    public function filter(Request $request): \Illuminate\Http\RedirectResponse
+    public function filter(Request $request): RedirectResponse
     {
         $url = 'search=' . urlencode($request->search) . '&role_id=' . $request->role_id;
         return Redirect::to('users?' . $url);
@@ -40,9 +46,13 @@ class UserController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request, RoleService $roleService): View|Application|Factory|ContractApplication
     {
-        //
+        $role_list = ['0' => __('label.SELECT_ROLE')] + $roleService->findAllList();
+
+        return view('settings.user-setup.user.create')->with(compact(
+            'request', 'role_list'
+        ));
     }
 
     /**

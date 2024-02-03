@@ -14,7 +14,7 @@ Class UserService
         $users = User::query()->with(['role']);
 
         if(!empty($request->search)){
-            $users =  $users->where('name', $request->search);
+            $users =  $users->where('name', 'like', '%' . $request->search . '%');
         }
         if(!empty($request->role_id)){
             $users =  $users->where('role_id', $request->role_id);

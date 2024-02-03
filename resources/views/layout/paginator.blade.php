@@ -19,8 +19,8 @@
                 {!! Form::select('record_per_page', get_per_page_record_list(), get_per_page_record(), [
                     'id' => 'recordPerPage', 'class' => 'form-select w-px-40'
                 ]) !!}
-                <button class="btn btn-primary" type="submit" id="pageRecordBtn">
-                    <i class='bx bx-right-arrow-alt'></i>
+                <button class="btn blue-steel" type="submit" id="pageRecordBtn">
+                    <i class='bx bx-right-arrow-alt fw-bolder'></i>
                 </button>
             </div>
             {!! Form::close() !!}
